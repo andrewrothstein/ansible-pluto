@@ -1,0 +1,11 @@
+---
+# vars file for pluto
+pluto_platform: '{{ pluto_os }}_{{ pluto_arch }}'
+pluto_name: pluto_{{ pluto_ver }}_{{ pluto_platform }}
+pluto_tgz: '{{ pluto_name }}.tar.gz'
+pluto_url: '{{ pluto_mirror }}/v{{ pluto_ver }}/{{ pluto_tgz }}'
+pluto_tmp_tgz: /tmp/{{ pluto_tgz }}
+pluto_checksum: '{{ pluto_checksums[pluto_ver][pluto_platform] }}'
+pluto_install_dir: '{{ pluto_parent_install_dir }}/{{ pluto_name }}'
+pluto_exe: '{{ pluto_install_dir }}/pluto'
+pluto_link: '{{ pluto_parent_install_dir }}/bin/pluto'

@@ -1,0 +1,56 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: check for install in {{ pluto_exe }}
+  become: true
+  stat:
+    path: '{{ pluto_exe }}'
+  changed_when: false
+  register: pluto_binary
+- when: not pluto_binary.stat.exists
+  block:
+    - name: downloading {{ pluto_url }} to {{ pluto_tmp_tgz }}
+      become: true
+      become_user: root
+      get_url:
+        url: '{{ pluto_url }}'
+        dest: '{{ pluto_tmp_tgz }}'
+        mode: 0644
+        checksum: '{{ pluto_checksum }}'
+    - name: mkdir {{ pluto_install_dir }}
+      become: true
+      become_user: root
+      file:
+        path: '{{ pluto_install_dir }}'
+        mode: 0755
+        state: directory
+    - name: unarchiving {{ pluto_tmp_tgz }} into {{ pluto_install_dir }}
+      become: true
+      become_user: root
+      unarchive:
+        remote_src: true
+        src: '{{ pluto_tmp_tgz }}'
+        dest: '{{ pluto_install_dir }}'
+        creates: '{{ pluto_exe }}'
+  always:
+    - name: rm {{ pluto_tmp_tgz }}
+      become: true
+      become_user: root
+      file:
+        path: '{{ pluto_tmp_tgz }}'
+        state: absent
+- name: linking {{ pluto_link }} to {{ pluto_exe }}
+  become: true
+  become_user: root
+  file:
+    src: '{{ pluto_exe }}'
+    dest: '{{ pluto_link }}'
+    state: link

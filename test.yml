@@ -1,0 +1,10 @@
+---
+- hosts: all
+  roles:
+  - role: '{{ playbook_dir }}'
+  tasks:
+  - command: pluto version
+    register: pluto_test_version
+  - name: pluto version
+    debug:
+      msg: '{{ pluto_test_version.stdout }}'

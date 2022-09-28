@@ -1,5 +1,7 @@
 ---
 # vars file for pluto
+pluto_os: '{{ ansible_system | lower }}'
+pluto_arch: '{{ plugo_arch_map[ansible_architecture] }}'
 pluto_platform: '{{ pluto_os }}_{{ pluto_arch }}'
 pluto_name: pluto_{{ pluto_ver }}_{{ pluto_platform }}
 pluto_tgz: '{{ pluto_name }}.tar.gz'

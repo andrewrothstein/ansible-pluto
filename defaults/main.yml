@@ -1,8 +1,12 @@
 ---
 # defaults file for pluto
-pluto_ver: 5.10.3
-pluto_os: linux
-pluto_arch: amd64
+pluto_ver: 5.11.0
+pluto_arch_map:
+  aarch64: arm64
+  arm64: arm64
+  armv6: armv6
+  armv7: armv7
+  x86_64: amd64
 pluto_mirror: https://github.com/FairwindsOps/pluto/releases/download
 pluto_parent_install_dir: /usr/local
 
@@ -227,3 +231,113 @@ pluto_checksums:
     windows_armv6: sha256:6e396d3a246d1e0340d47f1c92bb646ff28a114154c751f9f4a817c7c7cc70ac
     # https://github.com/FairwindsOps/pluto/releases/download/v5.10.3/pluto_5.10.3_windows_armv7.tar.gz
     windows_armv7: sha256:0fc9ffe42bf233d52b71f28de783df5ca321e5103cebb6bb210e5fe2139f44e9
+  # https://github.com/FairwindsOps/pluto/releases/download/v5.10.4/checksums.txt
+  '5.10.4':
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.4/pluto_5.10.4_darwin_amd64.tar.gz
+    darwin_amd64: sha256:2f12617d41407e8ddb389b18d367fee02a48a49fefe0d5f78c633ebe67bff90f
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.4/pluto_5.10.4_darwin_arm64.tar.gz
+    darwin_arm64: sha256:65750cc1ed6d5cf7dc969d1e7d076775b6c4f0e89d9181b9b227a1421952d473
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.4/pluto_5.10.4_linux_amd64.tar.gz
+    linux_amd64: sha256:cb21cb99a79386474fc9f172bd0c092f7ca766dc529163ec42a544e1fc9d09cc
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.4/pluto_5.10.4_linux_arm64.tar.gz
+    linux_arm64: sha256:49602debe9a1315799a00615cb96b9b4043e1ea6f9283364daa825dd862e942d
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.4/pluto_5.10.4_linux_armv6.tar.gz
+    linux_armv6: sha256:3d4492dc1ba3660cabda9c0cfd23f17823084a9576bd1909e616ee11837a4144
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.4/pluto_5.10.4_linux_armv7.tar.gz
+    linux_armv7: sha256:06b9efdff08f91b7a549e9805a9ea958de1cc2c706bcbf7e3374aafbb10da592
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.4/pluto_5.10.4_windows_amd64.tar.gz
+    windows_amd64: sha256:ea84e85ffdf49cbdc977f25c62373abc025b0878ba035316b9e55cf28fb94e97
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.4/pluto_5.10.4_windows_arm64.tar.gz
+    windows_arm64: sha256:c5f461e6c8670be7d44f49f438f62ef13fa065fdcb1179cb2f46ee3f7799998e
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.4/pluto_5.10.4_windows_armv6.tar.gz
+    windows_armv6: sha256:7eaed9ff413d8e7125d94d588b751fe9c52e9cf552a5e68ece94f742e6f2d41f
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.4/pluto_5.10.4_windows_armv7.tar.gz
+    windows_armv7: sha256:1ca870d9227c3e3f60eaf0a2aafccff52a8ede0c2170a2de3c42e0df47e6b529
+  # https://github.com/FairwindsOps/pluto/releases/download/v5.10.5/checksums.txt
+  '5.10.5':
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.5/pluto_5.10.5_darwin_amd64.tar.gz
+    darwin_amd64: sha256:bc11c5a9ba18f55285a2bf31aab3d2755ab4a5921877400aaf8553e0cce74c6f
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.5/pluto_5.10.5_darwin_arm64.tar.gz
+    darwin_arm64: sha256:f672463839db33cc357f953ba3239a09fae07eb9df25ffb14369667085b845b0
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.5/pluto_5.10.5_linux_amd64.tar.gz
+    linux_amd64: sha256:33d089e0319d4403594efb430c6b2cad40357730daa74a89a494f69db1d940df
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.5/pluto_5.10.5_linux_arm64.tar.gz
+    linux_arm64: sha256:bd9d1aea74f44d5d893903471b30b843eecf83315f35bff855eea87cb9351e47
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.5/pluto_5.10.5_linux_armv6.tar.gz
+    linux_armv6: sha256:a4285a2a8c62ca0c4e9c4b962806c924c579bafa57cf7b3a2acb635ad0663c44
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.5/pluto_5.10.5_linux_armv7.tar.gz
+    linux_armv7: sha256:64dc526d50e9313afe24c4589d60f09e1b49110f55cf46fd1e4593cb29a3c3e3
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.5/pluto_5.10.5_windows_amd64.tar.gz
+    windows_amd64: sha256:747a17cab1250886c14a0a806c90d9e7979028ccf379180a4739f507598cec2c
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.5/pluto_5.10.5_windows_arm64.tar.gz
+    windows_arm64: sha256:e5f6d8f03bdffd48b8f2cf0d4b6209c7356578e21010a4927ff06f9fd855c3cc
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.5/pluto_5.10.5_windows_armv6.tar.gz
+    windows_armv6: sha256:3d055a33ab0f6063fd0fd0c1655b5580f56fe9c82c199563ebd4409a8d6cc247
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.5/pluto_5.10.5_windows_armv7.tar.gz
+    windows_armv7: sha256:962ea1e6633e23a90dfc79333688ccdb887f8224335d8832c5dbaa7259a5ca52
+  # https://github.com/FairwindsOps/pluto/releases/download/v5.10.6/checksums.txt
+  '5.10.6':
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.6/pluto_5.10.6_darwin_amd64.tar.gz
+    darwin_amd64: sha256:a3caa85e89224fd9ca866a7d7adaed9dc868735e4ca19f4f1e6e8411960ed9cb
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.6/pluto_5.10.6_darwin_arm64.tar.gz
+    darwin_arm64: sha256:f42828a1620d29bdefc56def7f0355d0e9f9484ba938f4704ffc88a9bbb90926
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.6/pluto_5.10.6_linux_amd64.tar.gz
+    linux_amd64: sha256:fc996f6582c4e11ffa678807b1c474186191a90a2efe3b3f95eb5d11ac60b610
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.6/pluto_5.10.6_linux_arm64.tar.gz
+    linux_arm64: sha256:f000532fd26396dfe54c20f85a0a88476d9d527537da4de8d0563ddb32f4b019
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.6/pluto_5.10.6_linux_armv6.tar.gz
+    linux_armv6: sha256:1bf81d631c4c915e511082f6682b7e099ad31338b3e56b6086db981405206b75
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.6/pluto_5.10.6_linux_armv7.tar.gz
+    linux_armv7: sha256:0e01ca3fb38255b481828a757d9f1e48ad4762a4de40e03eb63ff3e01c4eb986
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.6/pluto_5.10.6_windows_amd64.tar.gz
+    windows_amd64: sha256:0a682aaf7b508e76405eb3ba1823a3cecba0eefb222498f3aff8526e55b57d98
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.6/pluto_5.10.6_windows_arm64.tar.gz
+    windows_arm64: sha256:f518ed555d5c064b70f5611f81c7be3ccb1776ec35bc03a329682edb12eaeb1a
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.6/pluto_5.10.6_windows_armv6.tar.gz
+    windows_armv6: sha256:9ade422f4179accb7170a770a4254808a84812dd01db9a54e0241409512908d2
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.6/pluto_5.10.6_windows_armv7.tar.gz
+    windows_armv7: sha256:8efa87b97f3f129f8162c8bdeaf0155ef04fba8f03d3aec449dae66a976545bc
+  # https://github.com/FairwindsOps/pluto/releases/download/v5.10.7/checksums.txt
+  '5.10.7':
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.7/pluto_5.10.7_darwin_amd64.tar.gz
+    darwin_amd64: sha256:3f094b2bc84f47b12889db2330f64dc0391dd59084b9b1f3cb5db89497ec7f06
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.7/pluto_5.10.7_darwin_arm64.tar.gz
+    darwin_arm64: sha256:b138b08015f6d6d63424c552e947c84914dc0e6746f6c92e10bac725d79880ce
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.7/pluto_5.10.7_linux_amd64.tar.gz
+    linux_amd64: sha256:cc6acb56516ad53b4a188cd6bca8d6b37f1be519165c67cc84899a628af22372
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.7/pluto_5.10.7_linux_arm64.tar.gz
+    linux_arm64: sha256:2fe83e09ebd0ff5cab14177050ae7ad08df2c96c40aa243651674ec955ec4023
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.7/pluto_5.10.7_linux_armv6.tar.gz
+    linux_armv6: sha256:1afd70bac949eab4ab868506bfba7c0e9fd8565a73374eaa4e3a0f525ca98055
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.7/pluto_5.10.7_linux_armv7.tar.gz
+    linux_armv7: sha256:68a7737b74ead072addf5b3b3d9f40d298e85b140eb426ce7ea423872ac09201
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.7/pluto_5.10.7_windows_amd64.tar.gz
+    windows_amd64: sha256:8c611b96b9d141a5a24a302101a7c958bb4e9456f99a5e973da5bfe67eca3f90
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.7/pluto_5.10.7_windows_arm64.tar.gz
+    windows_arm64: sha256:3b74fcffcb029efcb2a1793f563e9e1fd0614976a255fc772c8f49e6112f559d
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.7/pluto_5.10.7_windows_armv6.tar.gz
+    windows_armv6: sha256:d08a8580379520540f7e36a9bf6681522fb87d8db6ad61e67975e7f550749351
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.10.7/pluto_5.10.7_windows_armv7.tar.gz
+    windows_armv7: sha256:ab01d096d21679af888032a3c9cfaec7442d2f80456babe30ffcb7119401fcfe
+  # https://github.com/FairwindsOps/pluto/releases/download/v5.11.0/checksums.txt
+  '5.11.0':
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.11.0/pluto_5.11.0_darwin_amd64.tar.gz
+    darwin_amd64: sha256:045aa58de52a479fb5cceadd063408da61f4ee8485c90195eebb75452574249f
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.11.0/pluto_5.11.0_darwin_arm64.tar.gz
+    darwin_arm64: sha256:d813573bcafdd1482dd85f9a0bd0a499c207ae35c0a0168ecf382418feb4c0b5
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.11.0/pluto_5.11.0_linux_amd64.tar.gz
+    linux_amd64: sha256:262c7c19a772eeaca8fc7cad312b15956597f1a399f48383cd28ddad26fe7d33
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.11.0/pluto_5.11.0_linux_arm64.tar.gz
+    linux_arm64: sha256:d93335a5967b9d6d512c3fc8ff4228c575ac0cd3e9a541e1f921aa8bc86bd782
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.11.0/pluto_5.11.0_linux_armv6.tar.gz
+    linux_armv6: sha256:e3fc8577062990af065bc0fc631cb69c72d92dcdaf24ea7d7a6c5bd83b287862
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.11.0/pluto_5.11.0_linux_armv7.tar.gz
+    linux_armv7: sha256:f249c002c5f93afa55ee4cec1cb38ff7d927cb4e6d4f9a4a29121f9624a22303
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.11.0/pluto_5.11.0_windows_amd64.tar.gz
+    windows_amd64: sha256:1ff5dc744d548b486704818b4fd5bc85a6c214d93c4c114d1a1decb2c3701fef
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.11.0/pluto_5.11.0_windows_arm64.tar.gz
+    windows_arm64: sha256:07046ec7bc5da47a2ceab1c992b3a00f0cef4660aa0f5efe849ea136d6ca791d
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.11.0/pluto_5.11.0_windows_armv6.tar.gz
+    windows_armv6: sha256:cc8f519098d77bc3aaeb46f07beaa05cbdaba15bd814d13ba6fb9429c14528fc
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.11.0/pluto_5.11.0_windows_armv7.tar.gz
+    windows_armv7: sha256:b40252acb7622216e94d4ad7bf7e0a77adafbf15d603f68f430c560074329938

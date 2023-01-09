@@ -45,4 +45,4 @@ dl_ver() {
     dl $ver $lchecksums windows armv7
 }
 
-dl_ver ${1:-5.11.2}
+dl_ver ${1:-5.12.0}

@@ -1,10 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.pluto
+  hosts: all
   roles:
-  - role: '{{ playbook_dir }}'
+    - role: '{{ playbook_dir }}'
   tasks:
-  - command: pluto version
-    register: pluto_test_version
-  - name: pluto version
-    debug:
-      msg: '{{ pluto_test_version.stdout }}'
+    - name: Executing 'pluto version'
+      ansible.builtin.command: pluto version
+      changed_when: false
+      register: pluto_test_version
+    - name: Output of 'pluto version'
+      ansible.builtin.debug:
+        msg: '{{ pluto_test_version.stdout }}'

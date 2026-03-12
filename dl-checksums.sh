@@ -41,8 +41,6 @@ dl_ver() {
     dl $ver $lchecksums linux armv7
     dl $ver $lchecksums windows amd64
     dl $ver $lchecksums windows arm64
-    dl $ver $lchecksums windows armv6
-    dl $ver $lchecksums windows armv7
 }
 
-dl_ver ${1:-5.21.4}
+dl_ver ${1:-5.23.5}

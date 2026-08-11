@@ -1,6 +1,6 @@
 ---
 # defaults file for pluto
-pluto_ver: 5.24.1
+pluto_ver: 5.24.3
 pluto_arch_map:
   aarch64: arm64
   arm64: arm64
@@ -879,3 +879,21 @@ pluto_checksums:
     windows_amd64: sha256:80072f0ed02ff4c02099b58c0cb88d513240cf0f1b4772d962e9d03b0a44c7ef
     # https://github.com/FairwindsOps/pluto/releases/download/v5.24.1/pluto_5.24.1_windows_arm64.tar.gz
     windows_arm64: sha256:93c801fb6f8115b0bfaa5004d7c97e1962d2c3869f5267f370b57861eda594f7
+  # https://github.com/FairwindsOps/pluto/releases/download/v5.24.3/checksums.txt
+  '5.24.3':
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.3/pluto_5.24.3_darwin_amd64.tar.gz
+    darwin_amd64: sha256:5d098949161d0e50103b34536e31be442a1b9ca3c8af6443b3c48a3e4b4a593a
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.3/pluto_5.24.3_darwin_arm64.tar.gz
+    darwin_arm64: sha256:650dfc0cf48ac5158ec80147d374381b48200de0b63efa3e0f72452e927b1c3a
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.3/pluto_5.24.3_linux_amd64.tar.gz
+    linux_amd64: sha256:f03bcf0ef81ddd2f2a73e7f6f3542f0e0e14ad3213cbdab725dd55dd1c8766ea
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.3/pluto_5.24.3_linux_arm64.tar.gz
+    linux_arm64: sha256:ba334c13b0f96b082649210fe643e40e0c4a242c14de6633e71eb7ab015e0029
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.3/pluto_5.24.3_linux_armv6.tar.gz
+    linux_armv6: sha256:50642bf41a3f67af56c7390daeeecac3c62cdcc8e49a945e3bb765228977bf7d
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.3/pluto_5.24.3_linux_armv7.tar.gz
+    linux_armv7: sha256:f86fe6b3c80e494cff5486c22a3b29a5e42232f017231bb93bd5e2c5785c576b
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.3/pluto_5.24.3_windows_amd64.tar.gz
+    windows_amd64: sha256:384b0110d2dc4283c74e630135b7f8e0ab41530d441a60c2275c3fd088a8f027
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.3/pluto_5.24.3_windows_arm64.tar.gz
+    windows_arm64: sha256:5aa3d9aa695f1789a8d244533eb8a11bed32a13a80627288c3541a813b624774

@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 set -e
 DIR=~/Downloads
 MIRROR=https://github.com/FairwindsOps/pluto/releases/download
@@ -17,8 +17,14 @@ dl() {
     local platform="${os}_${arch}"
     local file="${APP}_${ver}_${platform}.${archive_type}"
     local url=$MIRROR/v$ver/$file
-    printf "    # %s\n" $url
-    printf "    %s: sha256:%s\n" $platform $(grep $file $lchecksums | awk '{print $1}')
+    local sum
+    sum=$(awk -v f="$file" '$2 == f || $2 == "*" f {print $1}' "$lchecksums")
+    if ! printf '%s' "$sum" | grep -Eq '^[0-9a-f]{64}$'; then
+        echo "no valid checksum for $file in $lchecksums" >&2
+        exit 1
+    fi
+    printf "    # %s\n" "$url"
+    printf "    %s: sha256:%s\n" "$platform" "$sum"
 }
 
 dl_ver() {
@@ -27,20 +33,22 @@ dl_ver() {
     local lchecksums="${DIR}/${APP}_${ver}_checksums.txt"
     if [ ! -e $lchecksums ];
     then
-        curl -sSLf -o $lchecksums $url
+        curl -fsSL --proto '=https' --tlsv1.2 -o "$lchecksums" "$url"
     fi
 
-    printf "  # %s\n" $url
-    printf "  '%s':\n" $ver
+    printf "  # %s\n" "$url"
+    printf "  '%s':\n" "$ver"
 
-    dl $ver $lchecksums darwin amd64
-    dl $ver $lchecksums darwin arm64
-    dl $ver $lchecksums linux amd64
-    dl $ver $lchecksums linux arm64
-    dl $ver $lchecksums linux armv6
-    dl $ver $lchecksums linux armv7
-    dl $ver $lchecksums windows amd64
-    dl $ver $lchecksums windows arm64
+    dl "$ver" "$lchecksums" darwin amd64
+    dl "$ver" "$lchecksums" darwin arm64
+    dl "$ver" "$lchecksums" linux amd64
+    dl "$ver" "$lchecksums" linux arm64
+    dl "$ver" "$lchecksums" linux armv6
+    dl "$ver" "$lchecksums" linux armv7
+    dl "$ver" "$lchecksums" windows amd64
+    dl "$ver" "$lchecksums" windows arm64
 }
 
-dl_ver ${1:-5.24.4}
+for v in "${@:-5.24.5}"; do
+    dl_ver "$v"
+done

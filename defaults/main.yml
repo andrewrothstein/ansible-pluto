@@ -1,6 +1,6 @@
 ---
 # defaults file for pluto
-pluto_ver: 5.24.5
+pluto_ver: 5.24.6
 pluto_arch_map:
   aarch64: arm64
   arm64: arm64
@@ -1527,3 +1527,21 @@ pluto_checksums:
     windows_amd64: sha256:c2b84ce3b34110193ca3ce655278a37a7c245680ac5a474bbfe6ba190e496b99
     # https://github.com/FairwindsOps/pluto/releases/download/v5.24.5/pluto_5.24.5_windows_arm64.tar.gz
     windows_arm64: sha256:7816e48bc2e4c5e61dcedd671f3938b01aa16561e832d9431c54a10e0149cc3b
+  # https://github.com/FairwindsOps/pluto/releases/download/v5.24.6/checksums.txt
+  '5.24.6':
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.6/pluto_5.24.6_darwin_amd64.tar.gz
+    darwin_amd64: sha256:a0009fb43d27351eebc37f521189cee87d6a0e1069b4b5e89e91138c5c5ccdb4
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.6/pluto_5.24.6_darwin_arm64.tar.gz
+    darwin_arm64: sha256:457c732f17d95ce000e64c63fb3e604db1af1574b7570546145253e15e670f5c
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.6/pluto_5.24.6_linux_amd64.tar.gz
+    linux_amd64: sha256:e0c9517bb6fd3c7d5062432e538593195c7f73a477736a5f48760f171cc4b78e
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.6/pluto_5.24.6_linux_arm64.tar.gz
+    linux_arm64: sha256:6e6bc150cf89ca4b10003c24fe01bb3f3dcc9babe9fe370da14003444c194898
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.6/pluto_5.24.6_linux_armv6.tar.gz
+    linux_armv6: sha256:0bb17edb3f1acc5ac853e695faa0413665f1e47becc1dc3a1bb8d396322d42dd
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.6/pluto_5.24.6_linux_armv7.tar.gz
+    linux_armv7: sha256:274826330357df412e5a3d1340effd6b02964c93e84244786a403c07ac53b43f
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.6/pluto_5.24.6_windows_amd64.tar.gz
+    windows_amd64: sha256:31198fd4873be04ec44d55e0973455a57c47126df84869c66bbc3484a7562df2
+    # https://github.com/FairwindsOps/pluto/releases/download/v5.24.6/pluto_5.24.6_windows_arm64.tar.gz
+    windows_arm64: sha256:0d5eb1465083f073f10a52aa9a6fb727f85f3f788070596069d2141034e0a7f0

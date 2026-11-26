@@ -49,6 +49,6 @@ dl_ver() {
     dl "$ver" "$lchecksums" windows arm64
 }
 
-for v in "${@:-5.24.5}"; do
+for v in "${@:-5.24.6}"; do
     dl_ver "$v"
 done
